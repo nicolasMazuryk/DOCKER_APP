@@ -1,0 +1,24 @@
+<div>
+    <form class="col s12" ng-submit="vm.storeProduct()">
+        <div class="input-field col s6 m6 l6">
+            <input ng-model='name' id="name" type="text" class="validate">
+            <label for="name">Name</label>
+        </div>
+        <div class="input-field col s6 m6 l6">
+            <input ng-model="price" id="price" type="number" class="validate">
+            <label for="price">Price</label>
+        </div>
+        <div class="input-field col s6 m6 l6">
+            <textarea ng-model="description" id="desc" type="text" class="validate"></textarea>
+            <label for="desc">Description</label>
+        </div>
+        <div class="input-field col s6 m6 l6">
+            <input ng-model="category" id="category" type="text" class="validate">
+            <label for="category">Category</label>
+        </div>
+
+        <button type="submit" class="waves-effect waves-light btn get">Store Product</button>
+    </form>
+
+    <div ng-click="vm.getAllProducts()" class="btn">Get Items</div>
+</div>
