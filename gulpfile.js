@@ -158,6 +158,21 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
+gulp.task('script', function() {
+    var sources = browserify({
+        entries: 'src/main/app.js',
+        debug: true
+    })
+        .transform(babelify.configure());
+
+    return sources.bundle()
+        .pipe(vinylSourceStream('app.min.js'))
+        .pipe(vinylBuffer())
+        .pipe(plugins.ngAnnotate())
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest('build/scripts/'));
+});
+
 // Static server
 gulp.task('browser-sync', ['js', 'template', 'sass'], function() {
 
