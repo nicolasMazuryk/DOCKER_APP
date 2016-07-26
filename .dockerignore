@@ -1,0 +1,11 @@
+
+.git
+.idea
+
+node_modules
+
+gulpfile.js
+
+.gitignore
+.dockerignore
+*.DS_Store

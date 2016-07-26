@@ -24,13 +24,6 @@ angular.module('app.router')
 
             .state('default.homepage', {
                 url: '?q',
-                //resolve: {
-                //    user: {
-                //        name: 'Nicolas',
-                //        age: '24',
-                //        auth: true
-                //    }
-                //},
                 controller: 'homepage.controller',
                 controllerAs: 'vm',
                 templateProvider: function($templateCache) {
